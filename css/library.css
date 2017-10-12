@@ -1,0 +1,56 @@
+.mui-bar{
+	height: 7.4rem;
+}
+#pullrefresh{
+	padding-top: 7.4rem;
+}
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{
+	top:7.4rem;
+}
+.search-div{
+	display:inline-block;
+	border: 1px solid #555555;
+	height: 3rem;
+	border-radius:1.5rem ;
+	line-height: 3rem;
+	margin-top: 1rem;
+	right: 40px;
+    left: 40px;
+	
+}
+.search-div input{
+	margin-bottom: 0px;
+	border: none;
+	padding: 0 1.5rem;
+	height: 100%;
+	width: 100%;
+	background: none;
+	
+}
+.search-div .mui-icon{
+	margin: 0 0;
+	padding: 0 0;
+	line-height: 3rem;
+}
+.type-select{
+	width: 100%;
+	height: 3rem;
+	overflow: hidden;
+	top: 4.4rem;
+}
+.type-select ul{
+	margin:0 0;
+	padding: 0 0;
+	width: 56rem;
+	height:100%;
+	
+}
+.type-select ul li{
+	list-style: none;
+	float: left;
+	width: 8rem;
+	font-size: 1.2rem;
+	line-height: 2.4rem;
+	border: 1px solid #4F4F4F;
+	text-align: center;
+}

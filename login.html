@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/login.css" />
+	</head>
+
+	<body>
+		<div class="mui-input-group login-body">
+		    <div class="mui-input-row login-input-body">
+		    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+		    </div>
+		    <div class="mui-input-row login-input-body">
+		        <input type="password" class="mui-input-password" placeholder="请输入密码">
+		    </div>
+		    <div id="login" class="mui-button-row login-input-body login-button">
+		       			登录
+		    </div>
+		    <div class="mui-button-row login-input-body login-other">
+		       			<a href="register.html">注册</a>
+		       			&nbsp;|&nbsp;
+		       			<a>忘记密码</a>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui(".mui-input-group").on('tap','#login',function(){
+				location.href="index.html";
+			})
+		</script>
+	</body>
+
+</html>

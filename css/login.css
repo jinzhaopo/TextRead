@@ -1,0 +1,29 @@
+.login-body{
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 40%;
+    background: none;
+}
+.login-body .login-input-body{
+	margin-bottom: 2em;
+	border: 1px solid #333333;
+	border-radius: 2em;
+}
+.login-button{
+	background-color: #007AFF;
+    color:white;
+    text-align: center;
+    line-height: 1.8em;
+    font-size: 1.2em;
+}
+.mui-input-group:after{
+	background: none;
+}
+.login-other{
+	border:none !important;
+	color: #C0C0C0 !important;
+}
+.login-other a{
+	color: #C0C0C0 !important;
+}

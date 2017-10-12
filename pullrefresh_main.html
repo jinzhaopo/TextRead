@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<link rel="stylesheet" href="css/bookMain.css" />
+		<link rel="stylesheet" href="css/mui.min.css">
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-icon mui-action-menu mui-icon mui-icon-arrowleft mui-pull-left" href="#"  onclick="javascript:history.back(-1);"></a>
+			<h1 id="title" class="mui-title title-left">
+				<div class="route ">书库</div>
+				<div class="route">
+					<div class="route-horn"></div>
+					<div class="route-horn-top"></div>
+					网游
+				</div>
+				<div class="route">
+					<div class="route-horn"></div>
+					<div class="route-horn-top"></div>
+					全职高手
+				</div>
+			</h1>
+		</header>
+		<div class="mui-content">
+			<div class="book-body-main">
+				<img src="//qidian.qpic.cn/qdbimg/349573/1887208/180" />
+				<div class="book-information">
+					<h3>全职高手</h3>
+					<span>作者：<font>蝴蝶蓝</font></span><br />
+					<a>更新至：第一百三十五章</a>
+					<div class="btn-div">
+						<a class="btn-read">免费试读</a>
+						<a class="add-bookshelf">加入书架</a>
+					</div>
+				</div>
+			</div>
+			<div class="tab-head-div">
+				<ul>
+					<li class="on">简介</li>
+					<li>目录</li>
+					<li>读书心得</li>
+				</ul>
+			</div>
+			<div id="tab-body" class="mui-slider">
+				<div class="mui-slider-group">
+					<div class="mui-slider-item brief-introduction">
+						<!--简介-->
+						<p>网游荣耀中被誉为教科书级别的顶尖高手，因为种种原因遭到俱乐部的驱逐，
+						离开职业圈的他寄身于一家网吧成了一个小小的网管，但是，拥有十年游戏经验的他，
+						在荣耀新开的第十区重新投入了游戏，带着对往昔的回忆，和一把未完成的自制武器，
+						开始了重返巅峰之路。</p>
+					</div>
+					<div class="mui-slider-item">
+						<!--目录-->
+							<ul class="Catalog">
+								
+							</ul>
+						
+					</div>
+					<div class="mui-slider-item">
+						<!--读书心得-->
+						读书心得
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	<script type="application/javascript">
+			document.querySelector('#tab-body').addEventListener('slide', function(event) {
+				var indexNum=event.detail.slideNumber;
+				$('.tab-head-div ul li').removeClass('on');
+				$('.tab-head-div ul li').eq(indexNum).addClass('on');
+				var htmls="";
+				if(indexNum==1){
+					
+					for(var i=0;i<=100;i++){
+						htmls+="<li>第"+i+"章</li>";
+					}
+					$('.Catalog').html(htmls);
+					console.log(htmls);
+				}
+			});
+			var options={
+				scrollY: true, //是否竖向滚动
+				scrollX: true, //是否横向滚动
+				startX: 0, //初始化时滚动至x
+				startY: 0, //初始化时滚动至y
+				indicators: true, //是否显示滚动条
+				deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+				bounce: true //是否启用回弹	
+			}
+			
+			$(function(){
+				$('.tab-head-div ul li').bind('tap',function(){
+					$('.tab-head-div ul li').removeClass('on');
+					$(this).addClass('on');
+					var indexNum=$(this).index();
+					var slider = mui('#tab-body').slider();
+					slider.gotoItem(indexNum);
+				});
+			})
+		</script>
+	<script type="text/javascript">
+		//启用双击监听
+		/*mui.init({
+			gestureConfig:{
+				doubletap:true
+			},
+			subpages:[{ 
+				url:'pullrefresh_sub.html',
+				id:'pullrefresh_sub.html',
+				styles:{
+					top: '45px',
+					bottom: '0px', 
+				}
+			}] 
+		});
+	
+		var contentWebview = null;
+		document.querySelector('header').addEventListener('doubletap',function () {
+			if(contentWebview==null){
+				contentWebview = plus.webview.currentWebview().children()[0];
+			}
+			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
+		});*/
+	</script>
+
+</html>
