@@ -22,3 +22,10 @@
 .banner-div .mui-slider-group .mui-slider-item a img{
 	height: 100%;
 }
+#newBookRecommended li{
+	height: 80px;;
+}
+#newBookRecommended li img{
+	height: 75px;
+	width: 58px;
+}
