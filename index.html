@@ -7,6 +7,7 @@
     <script src="js/mui.min.js"></script>
     <link href="css/mui.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/icons-extra.css" />
     <link rel="stylesheet" href="css/bookList.css" />
     <script type="text/javascript" charset="utf-8">
     	function haha(){
@@ -20,7 +21,12 @@
 					contentover : "释放立即刷新",
 					contentrefresh : "正在刷新...",
 					callback: haha
-				}
+				},
+				/*up : {//上拉加载
+			      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+			      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+			      callback :haha //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+			    }*/
 			},
 			subpages:[{
 		      url:"main.html",//子页面HTML地址，支持本地地址和网络地址
@@ -28,7 +34,8 @@
 		      styles:{
 
 		      },
-		    }]
+		    }],
+		    
       	});
       	
       		/*mui.openWindow({
@@ -169,7 +176,7 @@
 	    		    </a>
 	    		    <a id="bookshelf" class="mui-tab-item">
 	    		        <span class="mui-icon mui-icon-list"></span>
-	    		        <span class="mui-tab-label">书库</span>
+	    		        <span class="mui-tab-label">分类</span>
 	    		    </a>
 	    		    <a class="mui-tab-item">
 	    		        <span class="mui-icon mui-icon-gear"></span>
@@ -187,61 +194,91 @@
 							    <div class="mui-slider-item"><a href="#"><img src="images/banner03.jpg" /></a></div>
 							    <div class="mui-slider-item"><a href="#"><img src="images/banner04.jpg" /></a></div>
 						  	</div>
+						  	<ul class="mui-table-view mui-grid-view mui-grid-9">
+							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							  	    <a href="#">
+							  	        <span class="mui-icon mui-icon-home"></span>
+							  	        <div class="mui-media-body">推荐</div>
+							  	    </a>
+							  	</li>
+							  	
+							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							  	    <a href="#">
+							  	        <span class="mui-icon-extra mui-icon-extra-rank"></span>
+							  	        <div class="mui-media-body">排行</div>
+							  	    </a>
+							  	</li>
+							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							  	    <a href="#">
+							  	        <span class="mui-icon-extra mui-icon-extra-class"></span>
+							  	        <div class="mui-media-body">分类</div>
+							  	    </a>
+							  	</li>
+							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
+							  	    <a href="#">
+							  	        <span class="mui-icon mui-icon-search"></span>
+							  	        <div class="mui-media-body">搜索</div>
+							  	    </a>
+							  	</li>
+						  	</ul>
 					</div>
-					<ul class="mui-table-view mui-grid-view mui-grid-9">
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-home"></span>
-					        <div class="mui-media-body">Home</div>
-					    </a>
-					</li>
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-email"><span class="mui-badge mui-badge-red">5</span></span>
-					        <div class="mui-media-body">Email</div>
-					    </a>
-					</li>
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-chatbubble"></span>
-					        <div class="mui-media-body">Chat</div>
-					    </a>
-					</li>
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-location"></span>
-					        <div class="mui-media-body">Location</div>
-					    </a>
-					</li>
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-search"></span>
-					        <div class="mui-media-body">Search</div>
-					    </a>
-					</li>
-					<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					    <a href="#">
-					        <span class="mui-icon mui-icon-phone"></span>
-					        <div class="mui-media-body">Phone</div>
-					    </a>
-					</li>
-					    </ul>
-					
+					<div id="hot">
+						当前最热
+					</div>
 					<ul class="mui-table-view mui-grid-view">
-					    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
 					        <a href="#">
-					            <img class="mui-media-object" src="http://placehold.it/400x300">
-					            <div class="mui-media-body">文字说明1</div>
+					            <img class="mui-media-object" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58">
+					            <div class="mui-media-body">全职高手</div>
 					        </a>
 					    </li>
-					    <li class="mui-table-view-cell mui-media mui-col-xs-6">
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
 					        <a href="#">
-					            <img class="mui-media-object" src="http://placehold.it/400x300">
-					            <div class="mui-media-body">文字说明2</div>
+					            <img class="mui-media-object" src="http://qidian.qpic.cn/qdbimg/349573/3347586/180">
+					            <div class="mui-media-body">武道丹尊</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58">
+					            <div class="mui-media-body">全职高手</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://qidian.qpic.cn/qdbimg/349573/3347586/180">
+					            <div class="mui-media-body">武道丹尊</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58">
+					            <div class="mui-media-body">全职高手</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://qidian.qpic.cn/qdbimg/349573/3347586/180">
+					            <div class="mui-media-body">武道丹尊</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58">
+					            <div class="mui-media-body">全职高手</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://qidian.qpic.cn/qdbimg/349573/3347586/180">
+					            <div class="mui-media-body">武道丹尊</div>
 					        </a>
 					    </li>
 					</ul>
-				    <ul class="mui-table-view mui-table-view-chevron bookUl">
+					<div>
+						新书推荐
+					</div>
+				    <ul class="mui-table-view mui-table-view-chevron bookUl" id="newBookRecommended">
 						<li class="bookLi">
 							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
 							<div class="book-information">
