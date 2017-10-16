@@ -1,0 +1,29 @@
+
+@font-face {font-family: "iconfont";
+  src: url('../fonts/iconfont.ttf'); /* IE9*/
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-tushu:before { content: "\e610"; }
+
+.icon-tubiao3:before { content: "\e6e3"; }
+
+.icon-ttpodicon:before { content: "\e66e"; }
+
+.icon-fenlei:before { content: "\e623"; }
+
+.icon-tushu1:before { content: "\e614"; }
+
+.icon-tushu2:before { content: "\e650"; }
+
+.icon-tushu3:before { content: "\f02fc"; }
+
+.icon-sousuo:before { content: "\e615"; }
+

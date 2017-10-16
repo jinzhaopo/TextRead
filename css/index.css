@@ -23,9 +23,12 @@
 	height: 100%;
 }
 #newBookRecommended li{
-	height: 80px;;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	height: 180px;
 }
 #newBookRecommended li img{
-	height: 75px;
-	width: 58px;
+	height: 95%;
+	width: 13%;
+	max-width: 110px;
 }
