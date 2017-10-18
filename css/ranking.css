@@ -1,0 +1,90 @@
+.mui-bar{
+	height: 7.4rem;
+}
+#pullrefresh{
+	padding-top: 9rem;
+}
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{
+	top:7.4rem;
+}
+.search-div{
+	display:inline-block;
+	border: 1px solid #555555;
+	height: 3rem;
+	border-radius:1.5rem ;
+	line-height: 3rem;
+	margin-top: 1rem;
+	right: 40px;
+    left: 40px;
+	
+}
+.search-div input{
+	margin-bottom: 0px;
+	border: none;
+	padding: 0 1.5rem;
+	height: 100%;
+	width: 100%;
+	background: none;
+	
+}
+.search-div .mui-icon{
+	margin: 0 0;
+	padding: 0 0;
+	line-height: 3rem;
+}
+.type-select{
+	width: 100%;
+	height: 3rem;
+	overflow: hidden;
+	top: 4.4rem;
+}
+.type-select ul{
+	margin:0 0;
+	padding: 0 0;
+	width: 56rem;
+	height:100%;
+	
+}
+.type-select ul li{
+	list-style: none;
+	float: left;
+	width: 8rem;
+	font-size: 1.2rem;
+	line-height: 2.4rem;
+	border: 1px solid #4F4F4F;
+	text-align: center;
+}
+#type-scroll{
+	height: 8em;
+}
+#menutop1 #menutop1a1{
+	text-align: right;
+	padding-right: 2em;
+}
+#menutop1 #menutop1a2{
+	text-align: left;
+	padding-left: 2em;
+}
+#menutop1{
+	border: hidden;
+}
+.mui-segmented-control .mui-control-item.mui-active {
+color: red;
+background-color: #F7F7F7;
+border: 0px !important;
+
+}
+.mui-segmented-control .mui-control-item{
+	border: 0px;
+}
+.mui-segmented-control{
+	border: 0px;
+}
+.mui-bar {
+height: 9rem;
+}
+.book-statu{
+	float: right;
+	background-color: #FFFFFF !important;
+	color: #000000 !important;
+}
