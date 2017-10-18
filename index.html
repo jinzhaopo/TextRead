@@ -84,6 +84,35 @@
             mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
 				location.href="login.html";
 			});
+			mui(".mui-col-sm-3").on('tap','#search',function(){
+				location.href="search.html";
+			});
+			var btn1=document.getElementById("classification");
+			btn1.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'classification.html',
+		      		id:'classification',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
+			var btn3=document.getElementById("ranking");
+			btn3.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'ranking.html',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
+			
 			var btn = document.getElementById("library");
 			btn.addEventListener("tap",function () {
 				 mui.openWindow({
@@ -100,8 +129,8 @@
 			var btn2=document.getElementById("bookshelf");
 			btn2.addEventListener("tap",function () {
 				 mui.openWindow({
-		      		url:'bookshelf.html',
-		      		id:'bookshelf',
+		      		url:'classification.html',
+		      		id:'classification',
 		      		styles:{
 		      			top:"50px",
 		      			bottom:"51px",
@@ -246,13 +275,13 @@
 							  	</li>
 							  	
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							  	    <a href="#">
+							  	    <a href="#" id="ranking">
 							  	        <span class="mui-icon iconfont icon-ttpodicon"></span>
 							  	        <div class="mui-media-body">排行</div>
 							  	    </a>
 							  	</li>
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							  	    <a href="#">
+							  	    <a href="#" id="classification">
 
 							  	        <span class="mui-icon iconfont icon-tubiao3"></span>
 
@@ -260,7 +289,7 @@
 							  	    </a>
 							  	</li>
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							  	    <a href="#">
+							  	    <a href="#" id="search">
 							  	        <span class="mui-icon iconfont icon-sousuo"></span>
 							  	        <div class="mui-media-body">搜索</div>
 							  	    </a>
