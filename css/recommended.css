@@ -2,7 +2,7 @@
 	height: 7.4rem;
 }
 #pullrefresh{
-	padding-top: 9rem;
+	padding-top: 44px;
 }
 .mui-bar-nav~.mui-content .mui-pull-top-pocket{
 	top:7.4rem;
@@ -59,11 +59,11 @@
 }
 #menutop1 #menutop1a1{
 	text-align: right;
-	padding-right: 7em;
+	padding-right: 2em;
 }
 #menutop1 #menutop1a2{
 	text-align: left;
-	padding-left: 7em;
+	padding-left: 2em;
 }
 #menutop1{
 	border: hidden;
@@ -81,7 +81,7 @@ border: 0px !important;
 	border: 0px;
 }
 .mui-bar {
-	height: 9rem;
+	height: 44px;
 }
 .book-statu{
 	float: right;
