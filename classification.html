@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<link rel="stylesheet" href="css/classification.css" />
+		<script type="text/javascript" charset="utf-8">
+	    	function haha(){
+	    		alert("加载完成");
+	    	}
+	      	mui.init({
+	      		 pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						contentdown : "下拉可以刷新",
+						contentover : "释放立即刷新",
+						contentrefresh : "正在刷新...",
+						callback: haha
+					}
+				},
+				subpages:[{
+			      url:"main.html",//子页面HTML地址，支持本地地址和网络地址
+			      id:"main.html",//子页面标志
+			      styles:{
+	
+			      },
+			    }]
+	      	});
+	      	
+	      	window.onload = function(){  
+	            mui('#pullrefresh').scroll(); 
+	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
+					location.href="login.html";
+				});
+				initPage();
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+	        }  
+	    </script>
+	</head>
+	
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <aside class="mui-off-canvas-left" id="offCanvasSide">
+		                <div class="mui-scroll-wrapper SideScrollDiv">
+		                    <div class="mui-scroll">
+		                        <!-- 菜单具体展示内容 -->
+		                        <div id="reg">
+	                        	<img class="userHeadPortrait" src="images/IMG_0059.JPG" />
+	                        	<h3>点击登录</h3>
+	                        </div>
+	                        <ul class="mui-table-view ">
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">我的书架</a>
+	                        		<ul class="mui-table-view">
+      									<li class="mui-table-view-cell">
+        									<a href="#">菜单1</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">菜单2</a>
+      									</li>
+   									</ul>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">读书小组</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">读书笔记</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">读书心得</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">已购图书</a>
+	                        	</li>
+	                        </ul>
+		                    </div>
+		                </div>
+		            </aside>
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
+		                <h1 class="mui-title">数字图书馆</h1>
+		            </header>
+		            <nav class="mui-bar mui-bar-tab">
+			    		 <a class="mui-tab-item ">
+		    		        <span class="mui-icon mui-icon-home"></span>
+		    		        <span class="mui-tab-label">首页</span>
+		    		    </a>
+		    		    <a id="library" class="mui-tab-item">
+		    		        <span class="mui-icon mui-icon-bars"></span>
+		    		        <span class="mui-tab-label">书架</span>
+		    		    </a>
+		    		    <a id="bookshelf" class="mui-tab-item mui-active">
+		    		        <span class="mui-icon mui-icon-list"></span>
+		    		        <span class="mui-tab-label">分类</span>
+		    		    </a>
+		    		    <a class="mui-tab-item">
+		    		        <span class="mui-icon mui-icon-gear"></span>
+		    		        <span class="mui-tab-label">设置</span>
+		    		    </a>
+		    		</nav>
+		            <!-- 主页面内容容器 -->
+		            <div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+		                <div class="mui-scroll">
+		                    <!-- 主界面具体展示内容 -->
+		                <ul class="mui-table-view mui-grid-view">
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/A.png" />
+		                            <div class="mui-media-body">A 马克思主义、列宁主义、毛泽东思想、邓小平理论</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3">
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/B.png" />
+		                            <div class="mui-media-body">B 哲学、宗教</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/C.png">
+		                            <div class="mui-media-body">C 社会科学总论</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/D.png">
+		                            <div class="mui-media-body">D 政治、法律</div>
+		                        </a>
+		                    </li>
+		                     <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/E.png" />
+		                            <div class="mui-media-body">E 军事</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3">
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/F.png" />
+		                            <div class="mui-media-body">F 经济</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/G.png">
+		                            <div class="mui-media-body">G 文化、科学、教育、体育</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/H.png">
+		                            <div class="mui-media-body">H 语言、文字</div>
+		                        </a>
+		                    </li>
+		                     <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/I.png" />
+		                            <div class="mui-media-body">I 文学</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3">
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/J.png" />
+		                            <div class="mui-media-body">J 艺术</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/K.png">
+		                            <div class="mui-media-body">K 历史、地理</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/N.png">
+		                            <div class="mui-media-body">N 自然科学总论</div>
+		                        </a>
+		                    </li>
+		                     <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/O.png" />
+		                            <div class="mui-media-body">O 数理科学和化学</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3">
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/P.png" />
+		                            <div class="mui-media-body">P天文学、地球科学</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/Q.png">
+		                            <div class="mui-media-body">Q 生物科学</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/R.png">
+		                            <div class="mui-media-body">R 医药、卫生</div>
+		                        </a>
+		                    </li>
+		                     <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/S.png" />
+		                            <div class="mui-media-body">S 农业科学</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3">
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/T.png" />
+		                            <div class="mui-media-body">T 工业技术</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/U.png">
+		                            <div class="mui-media-body">U 交通运输</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/V.png">
+		                            <div class="mui-media-body">V 航空、航天</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/X.png">
+		                            <div class="mui-media-body">X 环境科学、劳动保护科学（安全科学）</div>
+		                        </a>
+		                    </li>
+		                    <li class="mui-table-view-cell mui-media  mui-col-sm-3" >
+		                        <a href="#">
+		                            <img class="mui-media-object" src="images/Z.png">
+		                            <div class="mui-media-body">Z 综合性图书</div>
+		                        </a>
+		                    </li>
+		                </ul>
+		                    
+		                </div>
+		            </div>
+		       	 
+		    </div>
+	</body>
+</html>
