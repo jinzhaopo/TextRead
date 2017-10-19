@@ -87,9 +87,6 @@
 			mui(".mui-col-sm-3").on('tap','#search',function(){
 				location.href="search.html";
 			});
-			mui(".mui-col-sm-3").on('tap','#recommended',function(){
-				location.href="recommended.html";
-			});
 			var btn1=document.getElementById("classification");
 			btn1.addEventListener("tap",function () {
 				 mui.openWindow({
@@ -116,19 +113,19 @@
 		      	})
 			});
 			
-//			var btn = document.getElementById("library");
-//			btn.addEventListener("tap",function () {
-//				 mui.openWindow({
-//		      		url:'Library.html',
-//		      		id:'library',
-//		      		styles:{
-//		      			top:"50px",
-//		      			bottom:"51px",
-//		      			height:"600px"
-//		      		},
-//		      		createNew:false
-//		      	})
-//			});
+			var btn = document.getElementById("library");
+			btn.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'Library.html',
+		      		id:'library',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
 			var btn2=document.getElementById("bookshelf");
 			btn2.addEventListener("tap",function () {
 				 mui.openWindow({
@@ -166,29 +163,63 @@
 	                        </div>
 	                        <ul class="mui-table-view ">
 	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">我的书架</a>
+	                        		<a class="mui-navigate-right" href="#">个人信息</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">书架</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
 	                        		<ul class="mui-table-view">
       									<li class="mui-table-view-cell">
-        									<a href="#">菜单1</a>
+        									<a href="#">课程信息</a>
       									</li>
       									<li class="mui-table-view-cell">
-        									<a href="#">菜单2</a>
+        									<a href="#">历史课程</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">心得评论</a>
       									</li>
    									</ul>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">读书小组</a>
+	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">读书笔记</a>
+	                        		<a class="mui-navigate-right" href="#">设置</a>
+	                        		<ul class="mui-table-view">
+      									<li class="mui-table-view-cell">
+        									<a href="#">账号管理</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">修改字体</a>
+      									</li>
+   									</ul>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<!--<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">读书心得</a>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">已购图书</a>
-	                        	</li>
+	                        	</li>-->
 	                        </ul>
+	                    </div>
+	                    <div id="id-sideColumn-bottom-set">
+	                    	<a id="id-sideColumn-bottom-nightMode">
+	                    		<span class="mui-icon iconfont icon-night" style="float: left;font-size: 38px;"></span>
+	                    		<span>夜间模式</span>
+	                    	</a>
+                        	
+                        	<a id="id-sideColumn-bottom-exit">
+	                        	<span >退出登录</span>
+	                        	<span class="mui-icon iconfont icon-tuichu" style="font-size: 38px;float: right;"></span>
+                        	</a>
 	                    </div>
 	                </div>
 	            </aside>
@@ -196,22 +227,23 @@
 	            <header class="mui-bar mui-bar-nav">
 	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
 	                <h1 class="mui-title">数字图书馆</h1>
+	                <span id="topIconSearch" class="mui-icon mui-icon-search"></span>
 	            </header>
 	            <nav class="mui-bar mui-bar-tab">
 	    		    <a class="mui-tab-item mui-active">
-	    		        <span class="mui-icon mui-icon-home"></span>
+	    		        <span class="mui-icon iconfont icon-shouye"></span>
 	    		        <span class="mui-tab-label">首页</span>
 	    		    </a>
 	    		    <a id="library" class="mui-tab-item">
-	    		        <span class="mui-icon mui-icon-bars"></span>
+	    		        <span class="mui-icon iconfont icon-shoucang"></span>
 	    		        <span class="mui-tab-label">收藏</span>
 	    		    </a>
 	    		    <a id="bookshelf" class="mui-tab-item">
-	    		        <span class="mui-icon mui-icon-list"></span>
+	    		        <span class="mui-icon iconfont icon-yuelanshi"></span>
 	    		        <span class="mui-tab-label">阅览课</span>
 	    		    </a>
 	    		    <a class="mui-tab-item">
-	    		        <span class="mui-icon mui-icon-gear"></span>
+	    		        <span class="mui-icon iconfont icon-shu"></span>
 	    		        <span class="mui-tab-label">书库</span>
 	    		    </a>
 	    		</nav>
@@ -271,7 +303,7 @@
 						  	
 						  	<ul class="mui-table-view mui-grid-view mui-grid-9">
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							  	    <a href="#" id="recommended">
+							  	    <a href="#">
 							  	        <span class="mui-icon iconfont icon-tushu"></span>
 							  	        <div class="mui-media-body">推荐</div>
 							  	    </a>
@@ -293,7 +325,7 @@
 							  	</li>
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 							  	    <a href="#" id="search">
-							  	        <span class="mui-icon iconfont icon-sousuo"></span>
+							  	        <span class="mui-icon iconfont icon-jieyueyuguihuan"></span>
 							  	        <div class="mui-media-body">借还</div>
 							  	    </a>
 							  	</li>
