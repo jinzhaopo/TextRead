@@ -70,8 +70,18 @@
 						
 					</div>
 					<div class="mui-slider-item">
-						<!--读书心得-->
-						读书心得
+						<div class="comment_items clearfix">
+							<div class="items_left_pic" style="font-size: 14px;font-weight: bold;">
+								<span class="name" title="">张涵迎</span>
+							</div><div class="items_right">
+								<div class="describe_detail" style="font-size: 14px;padding: 10px 0px 10px 40px;">
+									<span>马克思主义哲学理论（辩证唯物主义和历史唯物主义）的基本观点是物质决定意识、存在决定思维，马克思主义政治经济学（劳动价值论和剩余价值论）的基本观点是剥削有罪、造反有理，马克思科学社会主义的基本观点是社会主义、共产主义取代资本主义是社会发展的必然规律。</span>
+								</div>
+								<div class="starline clearfix">
+									<span>2017-09-12 09:30:29</span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -87,7 +97,7 @@
 				var htmls="";
 				if(indexNum==1){
 					
-					for(var i=0;i<=100;i++){
+					for(var i=0;i<=30;i++){
 						htmls+="<li>第"+i+"章</li>";
 					}
 					$('.Catalog').html(htmls);
