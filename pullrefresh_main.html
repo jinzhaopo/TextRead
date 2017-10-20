@@ -8,7 +8,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<link rel="stylesheet" href="css/bookMain.css" />
 		<link rel="stylesheet" href="css/mui.min.css">
-		
+		<script type="text/javascript" src="js/echarts.common.min.js" ></script>
 	</head>
 
 	<body>
@@ -19,12 +19,12 @@
 				<div class="route">
 					<div class="route-horn"></div>
 					<div class="route-horn-top"></div>
-					网游
+					A类
 				</div>
 				<div class="route">
 					<div class="route-horn"></div>
 					<div class="route-horn-top"></div>
-					全职高手
+					马克思主义基本原理
 				</div>
 			</h1>
 		</header>
@@ -33,7 +33,7 @@
 				<img src="http://192.168.1.5/pic/7-01-004121-0.jpg" />
 				<div class="book-information">
 					<h3>马克思主义基本原理</h3>
-					<p id="pNum">总订阅量：24</p><br />
+					<p id="pNum">总订阅量：240</p><br />
 					<span>作者:任树江</span><br />
 					<span>出版时间:2004</span><br />
 					<span>出版、发行者:人民出版社</span><br />
@@ -46,6 +46,38 @@
 					</div>
 				</div>
 			</div>
+			<div  id="bookVersions">
+				<table border="1" cellspacing="0">
+						<tr>
+							<td>序号</td>
+							<td>书名</td>
+							<td>出版时间</td>
+							<td>到期时间</td>
+							<td>可借数</td>
+							<td>订阅</td>
+							<td>是否分组阅读</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>马克思主义基本理论</td>
+							<td>2004-01-01 </td>
+							<td>2018.08.24</td>
+							<td>4</td>
+							<td><input type="button" value="订阅" onclick="bookBorrow(this,95,17)"></td>
+							<td><a href="/readerDept/createDept" onclick="return createDept(95);">是</a></td>
+						</tr>
+				
+						<tr>
+							<td>2</td>
+							<td>马克思主义基本理论</td>
+							<td>2004-01-01 </td>
+							<td>2018.08.24</td>
+							<td>33</td>
+							<td><input type="button" value="订阅" onclick="bookBorrow(this,115,17)"></td>
+							<td><a href="/readerDept/createDept" onclick="return createDept(115);">是</a></td>
+						</tr>
+					</table>
+			</div>
 			<div class="tab-head-div">
 				<ul>
 					<li class="on">书籍信息</li>
@@ -57,10 +89,14 @@
 				<div class="mui-slider-group">
 					<div class="mui-slider-item brief-introduction">
 						<!--简介-->
-						<p>网游荣耀中被誉为教科书级别的顶尖高手，因为种种原因遭到俱乐部的驱逐，
-						离开职业圈的他寄身于一家网吧成了一个小小的网管，但是，拥有十年游戏经验的他，
-						在荣耀新开的第十区重新投入了游戏，带着对往昔的回忆，和一把未完成的自制武器，
-						开始了重返巅峰之路。</p>
+						<p id="bookIntroduction" style="font-size: 14px;">马克思主义是一种社会主义思想体系。其基本内容包括马克思主义政治经济学、
+							辩证唯物主义和历史唯物主义以及科学社会主义三个主要组成部分。
+							马克思主义是无产阶级解放事业的指路明灯，他以建设共产主义理想社会为最终追求，
+							在世界新民主主义革命、社会主义革命和社会主义建设的进程中不断证明其正确性和指导意义。
+						</p>
+						<div id="bookEcharts" style="height: 300px;">
+							
+						</div>
 					</div>
 					<div class="mui-slider-item">
 						<!--目录-->
@@ -70,14 +106,28 @@
 						
 					</div>
 					<div class="mui-slider-item">
-						<div class="comment_items clearfix">
+						<div class="comment_items">
 							<div class="items_left_pic" style="font-size: 14px;font-weight: bold;">
 								<span class="name" title="">张涵迎</span>
 							</div><div class="items_right">
 								<div class="describe_detail" style="font-size: 14px;padding: 10px 0px 10px 40px;">
-									<span>马克思主义哲学理论（辩证唯物主义和历史唯物主义）的基本观点是物质决定意识、存在决定思维，马克思主义政治经济学（劳动价值论和剩余价值论）的基本观点是剥削有罪、造反有理，马克思科学社会主义的基本观点是社会主义、共产主义取代资本主义是社会发展的必然规律。</span>
+									<span>马克思主义哲学理论（辩证唯物主义和历史唯物主义）的基本观点是物质决定意识、存在决定思维,</span>
 								</div>
-								<div class="starline clearfix">
+								<div class="starline">
+									<span>2017-09-12 09:30:29</span>
+								</div>
+							</div>
+						</div>
+						<div class="comment_items">
+							<div class="items_left_pic" style="font-size: 14px;font-weight: bold;">
+								<span class="name" title="">张涵迎</span>
+							</div><div class="items_right">
+								<div class="describe_detail" style="font-size: 14px;padding: 10px 0px 10px 40px;">
+									<span>马克思主义哲学理论（辩证唯物主义和历史唯物主义）的基本观点是物质决定意识、存在决定思维，
+										马克思主义政治经济学（劳动价值论和剩余价值论）的基本观点是剥削有罪、造反有理，
+										马克思科学社会主义的基本观点是社会主义、共产主义取代资本主义是社会发展的必然规律。</span>
+								</div>
+								<div class="starline">
 									<span>2017-09-12 09:30:29</span>
 								</div>
 							</div>
@@ -97,11 +147,18 @@
 				var htmls="";
 				if(indexNum==1){
 					
-					for(var i=0;i<=30;i++){
+					/*for(var i=0;i<=30;i++){
 						htmls+="<li>第"+i+"章</li>";
-					}
+					}*/
+					htmls+="绪论<br/>一 什么是马克思主义<br/>二 马克思主义的产生和发展<br/>三 马克思主义的鲜明特征<br/>四 自觉学习和运用马克思主义<br/>"+
+					"原理内容<br/>第一章 世界的物质性及其发展规律<br/>第一节 物质世界和实践<br/>第二节 事物的普遍联系与发展<br/>第三节 客观规律性与主观能动性"+
+					"<br/>第二章 认识世界和改造世界<br/>第一节 认识的本质及规律<br/>第二节 真理与价值<br/>第三节 认识与实践的辨证统一"+
+					"<br/>第三章 人类社会及其发展规律<br/>第一节 社会意识和社会存在的辩证关系<br/>第二节 社会历史发展的动力<br/>第三节 人民群众在历史发展中的作用"+
+					"<br/>第四章 资本主义的形成及其本质<br/>第一节 资本主义的形成及私有制为基础的商品经济<br/>第二节 资本主义经济制度的本质<br/>第三节 资本主义的政治制度和意识形态"+
+					"<br/>第五章 资本主义发展的历史进程<br/>第一节 从自由竞争资本主义到垄断资本主义<br/>第二节 当代资本主义的新变化<br/>第三节 资本主义的历史地位和发展趋势"+
+					"<br/>第六章 社会主义社会及其发展<br/>第一节 社会主义制度的建立<br/>第二节 社会主义在实践中发展和完善<br/>第三节 马克思主义政党在社会主义事业中的地位和作用"+
+					"<br/>第七章 共产主义是人类最崇高的社会理想<br/>第一节 马克思主义经典作家对共产主义社会的展望<br/>第二节 共产主义社会是历史发展的必然趋势<br/>第三节 在建设中国特色社会主义的进程中为实现共产主义而奋斗";
 					$('.Catalog').html(htmls);
-					console.log(htmls);
 				}
 			});
 			var options={
@@ -148,5 +205,54 @@
 			contentWebview.evalJS("mui('#pullrefresh').pullRefresh().scrollTo(0,0,100)");
 		});*/
 	</script>
+	<script type="text/javascript">
+        var myChart = echarts.init(document.getElementById("bookEcharts"));
+        var option = {
+            title:{
+                text:"一年内借阅情况",
+                left:'center'  //left的值为'left', 'center', 'right'
+            },
+            tooltip:{
+                text:"this is tool tip"
+            },
+            xAxis:{
+            	//data:month,
+                data:["2016-08","2016-09","2016-10","2016-11","2016-12","2017-01","2017-02","2017-03","2017-04","2017-05","2017-06","2017-07"],
+              	//设置字体倾斜  
+                axisLabel:{  
+                    interval:0,  
+                    rotate:45,//倾斜度 -90 至 90 默认为0  
+                    margin:2,  
+                    textStyle:{  
+                        fontWeight:"bolder",  
+                        color:"#000000"  
+                    }  
+                }
+            },
+            yAxis:{},
+            series:[{
+                    name:["订阅量(本):"],
+                    type:"line",//条形图显示type:"bar",
+                    //data:count,
+                    data:[1,2,2,3,4,5,5,4,7,10,20,30],
+                    //顶部数字展示pzr  
+                    itemStyle: {  
+                        normal: {  
+                            label: {  
+                                show: true,//是否展示  
+                                textStyle: {  
+                                    fontWeight:'bolder',  
+                                    fontSize : '12',  
+                                    fontFamily : '微软雅黑',  
+                                }  
+                            }  
+                        }  
+                    }
+                   }]
+        };
+		myChart.setOption(option);
+
+
+    </script>
 
 </html>

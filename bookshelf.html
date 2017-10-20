@@ -55,230 +55,106 @@
 	        <!-- 主页面容器 -->
 	        <div class="mui-inner-wrap">
 	            <!-- 菜单容器 -->
-	            <aside class="mui-off-canvas-left" id="offCanvasSide">
-	                <div class="mui-scroll-wrapper">
-	                    <div class="mui-scroll SideScrollDiv">
-	                        <!-- 菜单具体展示内容 -->
-	                        <div id="reg">
-	                        	<img class="userHeadPortrait" src="images/IMG_0059.JPG" />
-	                        	<h3>点击登录</h3>
-	                        </div>
-	                        <ul class="mui-table-view ">
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">个人信息</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">书架</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
-	                        		<ul class="mui-table-view">
-      									<li class="mui-table-view-cell">
-        									<a href="#">课程信息</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">历史课程</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">心得评论</a>
-      									</li>
-   									</ul>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">设置</a>
-	                        		<ul class="mui-table-view">
-      									<li class="mui-table-view-cell">
-        									<a href="#">账号管理</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">修改字体</a>
-      									</li>
-   									</ul>
-	                        	</li>
-	                        	<!--<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">读书心得</a>
-	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
-	                        		<a class="mui-navigate-right" href="#">已购图书</a>
-	                        	</li>-->
-	                        </ul>
-	                    </div>
-	                    <div id="id-sideColumn-bottom-set">
-	                    	<a id="id-sideColumn-bottom-nightMode">
-	                    		<span class="mui-icon iconfont icon-night" style="float: left;font-size: 38px;"></span>
-	                    		<span>夜间模式</span>
-	                    	</a>
-                        	
-                        	<a id="id-sideColumn-bottom-exit">
-	                        	<span >退出登录</span>
-	                        	<span class="mui-icon iconfont icon-tuichu" style="font-size: 38px;float: right;"></span>
-                        	</a>
-	                    </div>
-	                </div>
-	            </aside>
 	            <!-- 主页面标题 -->
 	            <header class="mui-bar mui-bar-nav">
-	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left" href="#offCanvasSide"></a>
-	                <h1 class="mui-title">数字图书馆</h1>
+	                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+	                <h1 class="mui-title">我的收藏</h1>
 	            </header>
-	            <nav class="mui-bar mui-bar-tab">
-	    		    <a class="mui-tab-item mui-active">
-	    		        <span class="mui-icon iconfont icon-shouye"></span>
-	    		        <span class="mui-tab-label">首页</span>
-	    		    </a>
-	    		    <a id="library" class="mui-tab-item">
-	    		        <span class="mui-icon iconfont icon-shoucang"></span>
-	    		        <span class="mui-tab-label">收藏</span>
-	    		    </a>
-	    		    <a id="bookshelf" class="mui-tab-item">
-	    		        <span class="mui-icon iconfont icon-yuelanshi"></span>
-	    		        <span class="mui-tab-label">阅览课</span>
-	    		    </a>
-	    		    <a class="mui-tab-item">
-	    		        <span class="mui-icon iconfont icon-shu"></span>
-	    		        <span class="mui-tab-label">书库</span>
-	    		    </a>
-	    		</nav>
 	            <!-- 主页面内容容器 -->
 	            <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 	                <div id="main_body" class="mui-scroll">
 	                    <!-- 主界面具体展示内容 -->
-				    <ul class="mui-table-view mui-table-view-chevron bookUl">
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
-						<li class="bookLi">
-							<img src=" http://qidian.qpic.cn/qdbimg/349573/3347586/180"  />
-							<div class="book-information">
-								<h4>武道丹尊</h4><br />
-								<a class="book-SpeedOfProgress" >第九百四十五章 神</a>
-							</div>
-							<div class="book-upDate">
-								<span class="wenzi">更新</span><br />
-								<span class="date">2017-9-3 14:35</span>
-							</div>
-						</li>
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-								
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
-						<li class="bookLi">
-							<img src=" http://qidian.qpic.cn/qdbimg/349573/3347586/180"  />
-							<div class="book-information">
-								<h4>武道丹尊</h4><br />
-								<a class="book-SpeedOfProgress" >第九百四十五章 神</a>
-							</div>
-							<div class="book-upDate">
-								<span class="wenzi">更新</span><br />
-								<span class="date">2017-9-3 14:35</span>
-							</div>
-						</li>
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-								
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
-						<li class="bookLi">
-							<img src=" http://qidian.qpic.cn/qdbimg/349573/3347586/180"  />
-							<div class="book-information">
-								<h4>武道丹尊</h4><br />
-								<a class="book-SpeedOfProgress" >第九百四十五章 神</a>
-							</div>
-							<div class="book-upDate">
-								<span class="wenzi">更新</span><br />
-								<span class="date">2017-9-3 14:35</span>
-							</div>
-						</li>
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-								
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
-						<li class="bookLi">
-							<img src=" http://qidian.qpic.cn/qdbimg/349573/3347586/180"  />
-							<div class="book-information">
-								<h4>武道丹尊</h4><br />
-								<a class="book-SpeedOfProgress" >第九百四十五章 神</a>
-							</div>
-							<div class="book-upDate">
-								<span class="wenzi">更新</span><br />
-								<span class="date">2017-9-3 14:35</span>
-							</div>
-						</li>
-						<li class="bookLi">
-							<img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=84791125,2714157272&fm=58"  />
-							<div class="book-information">
-								<h4>全职高手</h4>
-								<span class="book-statu">已完结</span><br />
-								<a class="book-SpeedOfProgress" >第一千七百七十六章 我可是职业选手</a>
-							</div>
-							<div class="book-Selling">
-								
-							</div>
-							<span class="text-selling">
-								热销
-							</span>
-						</li>
+				    <ul class="mui-table-view mui-grid-view" id="hotRecommended">
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+					            <div class="mui-media-body">马克思主义基本原理</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5612-1497-9.jpg">
+					            <div class="mui-media-body">新编中文Windows XP教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-03-015197-6.jpg">
+					            <div class="mui-media-body">3ds max园林表现教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-115-09194-3.jpg">
+					            <div class="mui-media-body">电子商务实用基础</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-115-09196-X.jpg">
+					            <div class="mui-media-body">电子商务与国际贸易</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5622-2208-8.jpg">
+					            <div class="mui-media-body">岁月诗痕</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-03-012584-3.jpg">
+					            <div class="mui-media-body">新概念PowerPoint 2002教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5601-2729-0.jpg">
+					            <div class="mui-media-body">近世代数基础</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5612-1497-9.jpg">
+					            <div class="mui-media-body">新编中文Windows XP教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-03-015197-6.jpg">
+					            <div class="mui-media-body">3ds max园林表现教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-115-09194-3.jpg">
+					            <div class="mui-media-body">电子商务实用基础</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-115-09196-X.jpg">
+					            <div class="mui-media-body">电子商务与国际贸易</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5622-2208-8.jpg">
+					            <div class="mui-media-body">岁月诗痕</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-03-012584-3.jpg">
+					            <div class="mui-media-body">新概念PowerPoint 2002教程</div>
+					        </a>
+					    </li>
+					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+					        <a href="#">
+					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-5601-2729-0.jpg">
+					            <div class="mui-media-body">近世代数基础</div>
+					        </a>
+					    </li>
 					</ul>
 	                </div>
 	            </div>

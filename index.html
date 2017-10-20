@@ -87,6 +87,12 @@
 			mui(".mui-col-sm-3").on('tap','#search',function(){
 				location.href="search.html";
 			});
+			mui("#hotRecommended").on('tap','.mui-col-xs-3',function(){
+				location.href="pullrefresh_main.html";
+			});
+			mui("#newBookRecommended").on('tap','.bookLi',function(){
+				location.href="pullrefresh_main.html";
+			});
 			var btn1=document.getElementById("classification");
 			btn1.addEventListener("tap",function () {
 				 mui.openWindow({
@@ -129,8 +135,48 @@
 			var btn2=document.getElementById("bookshelf");
 			btn2.addEventListener("tap",function () {
 				 mui.openWindow({
-		      		url:'classification.html',
-		      		id:'classification',
+		      		url:'bookshelf.html',
+		      		id:'bookshelf',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
+			var btn4 = document.getElementById("recommended");
+			btn4.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'recommended.html',
+		      		id:'recommended',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
+			
+			var btn5 = document.getElementById("topIconSearch");
+			btn5.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'search.html',
+		      		id:'topIconSearch',
+		      		styles:{
+		      			top:"50px",
+		      			bottom:"51px",
+		      			height:"600px"
+		      		},
+		      		createNew:false
+		      	})
+			});
+			var btn6 = document.getElementById("appIndex");
+			btn6.addEventListener("tap",function () {
+				 mui.openWindow({
+		      		url:'index.html',
+		      		id:'appIndex',
 		      		styles:{
 		      			top:"50px",
 		      			bottom:"51px",
@@ -165,7 +211,7 @@
 	                        	<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">个人信息</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="bookshelf" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">书架</a>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
@@ -230,15 +276,15 @@
 	                <span id="topIconSearch" class="mui-icon mui-icon-search"></span>
 	            </header>
 	            <nav class="mui-bar mui-bar-tab">
-	    		    <a class="mui-tab-item mui-active">
+	    		    <a id="appIndex" class="mui-tab-item mui-active">
 	    		        <span class="mui-icon iconfont icon-shouye"></span>
 	    		        <span class="mui-tab-label">首页</span>
 	    		    </a>
-	    		    <a id="library" class="mui-tab-item">
+	    		    <a id="bookshelf" class="mui-tab-item">
 	    		        <span class="mui-icon iconfont icon-shoucang"></span>
 	    		        <span class="mui-tab-label">收藏</span>
 	    		    </a>
-	    		    <a id="bookshelf" class="mui-tab-item">
+	    		    <a id="library" class="mui-tab-item">
 	    		        <span class="mui-icon iconfont icon-yuelanshi"></span>
 	    		        <span class="mui-tab-label">阅览课</span>
 	    		    </a>
@@ -303,7 +349,7 @@
 						  	
 						  	<ul class="mui-table-view mui-grid-view mui-grid-9">
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
-							  	    <a href="#">
+							  	    <a href="#" id="recommended">
 							  	        <span class="mui-icon iconfont icon-tushu"></span>
 							  	        <div class="mui-media-body">推荐</div>
 							  	    </a>
@@ -317,9 +363,7 @@
 							  	</li>
 							  	<li class="mui-table-view-cell mui-media mui-col-xs-3 mui-col-sm-3">
 							  	    <a href="#" id="classification">
-
 							  	        <span class="mui-icon iconfont icon-tubiao3"></span>
-
 							  	        <div class="mui-media-body">分类</div>
 							  	    </a>
 							  	</li>
@@ -334,7 +378,7 @@
 					<div id="hot">
 						&nbsp;当前最热
 					</div>
-					<ul class="mui-table-view mui-grid-view">
+					<ul class="mui-table-view mui-grid-view" id="hotRecommended">
 					    <li class="mui-table-view-cell mui-media mui-col-xs-3">
 					        <a href="#">
 					            <img class="mui-media-object" src="http://192.168.1.5/pic/7-01-004121-0.jpg">

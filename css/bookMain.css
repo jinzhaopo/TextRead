@@ -56,6 +56,7 @@ ul,li{
 	margin-top: 0.8rem;
 	margin-left: 0.8rem;
 	border: 1px solid #4F4F4F;
+	max-width: 156px;
 }
 .book-body-main .book-information{
 	display: inline-block;
@@ -119,7 +120,7 @@ ul,li{
 	float: left;
 	list-style: none;
 	font-size: 1.4rem;
-	line-height: 1.8rem;
+	line-height: 2.5rem;
 	padding: 0.3rem 0.6rem;
 	border: 1px solid skyblue;
 	text-align:center;
@@ -145,4 +146,20 @@ ul,li{
 #pNum{
 	float: right;
 	padding: 1.2rem;
+}
+.comment_items{
+	margin-top: 1em;
+	margin-left: 1.2em;
+	border-bottom: 1px solid #F1F1F1;
+}
+#bookIntroduction{
+	margin-left: 1.2em;
+	border-bottom: 1px solid #F1F1F1;
+}
+#bookVersions table{
+	width:100%;
+	text-align: center;
+}
+#bookVersions{
+	margin: 1em;
 }
