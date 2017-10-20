@@ -3,7 +3,57 @@
 	<head>
 		<meta charset="UTF-8">
 		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/ranking.css" />
+		<link rel="stylesheet" href="css/index.css" />
+    	<link rel="stylesheet" href="css/bookList.css" />
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<script type="text/javascript" charset="utf-8">
+	    	function haha(){
+	    		setTimeout("mui('#pullrefresh').pullRefresh().setStopped(true);",5000);
+	    		
+	    	}
+	    	mui.init({
+				gestureConfig:{
+					doubletap:true
+				},
+				subpages:[{ 
+					url:'personalInformation.html',
+					id:'personalInformation.html',
+					styles:{
+						top: '74px',
+						bottom: '0px', 
+					}
+				}] 
+			});
+	      	
+	      	window.onload = function(){  
+	            mui('#pullrefresh').scroll(); 
+	            mui('#type-scroll').scroll({
+				 scrollY: false, //是否竖向滚动
+				 scrollX: true, //是否横向滚动
+				 startX: 0, //初始化时滚动至x
+				 startY: 0, //初始化时滚动至y
+				 indicators: false, //是否显示滚动条
+				 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
+				});
+	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
+					location.href="login.html";
+				});
+				
+				initPage();
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+				
+	        }  
+	    </script>
 	</head>
 	<body>
+		
 	</body>
 </html>
