@@ -58,14 +58,20 @@ background-color: #6699cc;
 	border-radius: 5px;
 	padding: 5px;
 }
+.mui-control-content .comment{
+	height: 215px;
 
+}
 
-
-
-
-
-
-
-
-
-
+.mui-control-content .comment textarea{
+	height: 150px;
+	
+}
+.mui-control-content .comment p{
+	text-align: right;
+	height: 50px;
+	line-height: 50px;
+}
+.mui-control-content .comment p input{
+	width: 100px;
+}

@@ -119,32 +119,38 @@
 		      	})
 			});
 			
-			var btn = document.getElementById("library");
-			btn.addEventListener("tap",function () {
-				 mui.openWindow({
-		      		url:'Library.html',
-		      		id:'library',
-		      		styles:{
-		      			top:"50px",
-		      			bottom:"51px",
-		      			height:"600px"
-		      		},
-		      		createNew:false
-		      	})
-			});
-			var btn2=document.getElementById("bookshelf");
-			btn2.addEventListener("tap",function () {
-				 mui.openWindow({
-		      		url:'bookshelf.html',
-		      		id:'bookshelf',
-		      		styles:{
-		      			top:"50px",
-		      			bottom:"51px",
-		      			height:"600px"
-		      		},
-		      		createNew:false
-		      	})
-			});
+//			var btn = document.getElementById("library");
+//			btn.addEventListener("tap",function () {
+//				 mui.openWindow({
+//		      		url:'readLesson.html',
+//		      		id:'library',
+//		      		styles:{
+//		      			top:"50px",
+//		      			bottom:"51px",
+//		      			height:"600px"
+//		      		},
+//		      		createNew:false
+//		      	})
+//			});
+			mui("body").on("tap","#library",function(){
+				location.href="readLesson.html";
+			})
+			mui("body").on("tap","#bookshelf",function(){
+				location.href="bookshelf.html";
+			})
+//			var btn2=document.getElementById("bookshelf");
+//			btn2.addEventListener("tap",function () {
+//				 mui.openWindow({
+//		      		url:'bookshelf.html',
+//		      		id:'bookshelf',
+//		      		styles:{
+//		      			top:"50px",
+//		      			bottom:"51px",
+//		      			height:"600px"
+//		      		},
+//		      		createNew:false
+//		      	})
+//			});
 			var btn4 = document.getElementById("recommended");
 			btn4.addEventListener("tap",function () {
 				 mui.openWindow({
