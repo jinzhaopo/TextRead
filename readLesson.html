@@ -12,21 +12,10 @@
 <link rel="stylesheet" href="css/mui.picker.min.css" />
 <script type="text/javascript" src="js/mui.picker.min.js" ></script>
 <script type="text/javascript" src="js/main.js" ></script>
-<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+
+
 <script>
-	$(function(){
-		mui(".unit p:last-child ").on("tag","a:first-child",function(){
-			var html="";
-			html+='<div class="comment">';
-			html+='<textarea id="textInput" oninput="staticComentWord(this);" onkeyup="staticComentWord(this);" placeholder="请输入150字以内的评论" ></textarea>';
-			html+='<input type="button" value="提交" />';
-			html+='<input type="button" value="取消" />';
-			html+='</div>';
-			$(this).parent().parent().after(html);
-		})
-	})
-</script>
-<script>
+	
 	mui.init();
 	
 	window.onload=function(){
@@ -73,7 +62,9 @@
 				});
 			})(mui);
 			
-		
+		mui(".unit p:last-child").on("tag"," a:last-child",function(){
+			location.href="lessonCheck.html";
+		})
 	}
 </script>
 </head>
@@ -206,7 +197,7 @@
 	                  				<p>&nbsp;&nbsp;&nbsp;&nbsp;课&nbsp;&nbsp;程&nbsp;&nbsp;名：第一节课</p>
 	                  				<p>&nbsp;&nbsp;&nbsp;&nbsp;参与时间：2017.01.01 22:22:22&nbsp;&nbsp;-&nbsp;&nbsp;2017.02.02 02:02:02</p>
 	                  				<p>
-	                  					<a >课程评论</a>
+	                  					<a class="comment-a">课程评论</a>
 	                  					<a>查看课程</a>
 	                  				</p>
 	                  			</div>
