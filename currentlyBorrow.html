@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/iconfont.css" rel="stylesheet" />
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/main.js" ></script>
+		<link rel="stylesheet" href="css/currentlyBorrow.css" />
+		<script type="text/javascript" charset="utf-8">
+	    	function haha(){
+	    		alert("加载完成");
+	    	}
+	      	mui.init({
+	      		 pullRefresh: {
+					container: '#pullrefresh',
+					down: {
+						contentdown : "下拉可以刷新",
+						contentover : "释放立即刷新",
+						contentrefresh : "正在刷新...",
+						callback: haha
+					}
+				},
+				subpages:[{
+			      url:"main.html",//子页面HTML地址，支持本地地址和网络地址
+			      id:"main.html",//子页面标志
+			      styles:{
+	
+			      },
+			    }]
+	      	});
+	      	
+	      	window.onload = function(){  
+	            mui('#pullrefresh').scroll(); 
+	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
+					location.href="login.html";
+				});
+				
+				var index=document.getElementById("index");
+				index.addEventListener("tap",function () {
+					mui.openWindow({
+						url:'index.html',
+						id:"index",
+							styles:{
+			      			top:"50px",
+			      			bottom:"51px",
+			      			height:"600px"
+		      			},
+		      			createNew:false
+					})
+				})
+				
+				initPage();
+				var gallery = mui('.mui-slider');
+				gallery.slider({
+					interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+				});
+	        }  
+	    </script>
+	</head>
+	
+	<body>
+		<!-- 主界面菜单同时移动 -->
+		    <!-- 侧滑导航根容器 -->
+		    <div class="mui-off-canvas-wrap mui-draggable">
+		        <!-- 主页面容器 -->
+		        <div class="mui-inner-wrap">
+		            <!-- 菜单容器 -->
+		            <!-- 主页面标题 -->
+		            <header class="mui-bar mui-bar-nav">
+		                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+		                <h1 class="mui-title">当前借阅</h1>
+		            </header>
+		            <!-- 主页面内容容器 -->
+		            <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+                		<ul class="mui-table-view">
+                		    <li class="mui-table-view-cell mui-media">
+                		        <a href="javascript:;">
+                		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+                		            <div class="mui-media-body">
+                		                <h4>马克思主义基本原理</h4>
+										<span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
+										<span class="pub">阅读进度:35%</span><br/>
+										<input type="button" value="继续阅读" />
+										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+                		            </div>
+                		        </a>
+                		    </li>
+                		    <li class="mui-table-view-cell mui-media">
+                		        <a href="javascript:;">
+                		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+                		            <div class="mui-media-body">
+                		                <h4>怀柔远人</h4>
+                		                <span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
+										<span class="pub">阅读进度:35%</span><br/>
+										<input type="button" value="继续阅读" />
+										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+                		            </div>
+                		        </a>
+                		    </li>
+                		    <li class="mui-table-view-cell mui-media">
+                		        <a href="javascript:;">
+                		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+                		            <div class="mui-media-body">
+                		                <h4>怀柔远人</h4>
+                		                <span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
+										<span class="pub">阅读进度:0%</span><br/>
+										<input type="button" value="继续阅读" />
+										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+                		            </div>
+                		        </a>
+                		    </li>
+                		</ul>
+                		
+		            </div>
+		    	</div>
+		    </div>
+	</body>
+</html>

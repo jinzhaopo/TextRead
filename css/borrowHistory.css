@@ -1,0 +1,32 @@
+.mui-media a{
+	font-size: 16px;
+	height: 8em;
+}
+#currentlyBorrowImg{
+	height: 95%;
+	width: 13%;
+	max-width: 110px;
+	max-height: 109px;
+}
+#item1 p{
+	margin: 20px 10px;
+	width: 100%;
+}
+.mui-control-content>p {
+	width: 80%;
+	margin: 20px auto;
+	line-height: 40px;
+}
+.mui-btn-block{
+	width: 30%;
+	height: 40px;
+	font-size: 12px;
+	padding: 9px 0;
+	color: #AAAAAA;
+}
+#demo1Btn{
+	width: 10%;
+	font-size: 16px;
+	float: right; 
+	margin-right: 20px;
+}
