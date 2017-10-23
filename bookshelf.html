@@ -39,11 +39,13 @@
 	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
 					location.href="login.html";
 				});
-				initPage();
-				var gallery = mui('.mui-slider');
-				gallery.slider({
-					interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
-				});
+				
+				mui("body").on("tap","#appIndex",function(){
+					location.href="index.html";
+				})
+				mui("body").on("tap","#library",function(){
+					location.href="readLesson.html";
+				})
 	        }  
 	    </script>
 	</head>
@@ -54,12 +56,100 @@
 	    <div class="mui-off-canvas-wrap mui-draggable">
 	        <!-- 主页面容器 -->
 	        <div class="mui-inner-wrap">
+	        	<aside class="mui-off-canvas-left" id="offCanvasSide">
+	                <div class="mui-scroll-wrapper">
+	                    <div class="mui-scroll SideScrollDiv">
+	                        <!-- 菜单具体展示内容 -->
+	                        <div id="reg">
+	                        	<img class="userHeadPortrait" src="images/IMG_0059.JPG" />
+	                        	<h3>点击登录</h3>
+	                        </div>
+	                        <ul class="mui-table-view ">
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">个人信息</a>
+	                        	</li>
+	                        	<li id="bookshelf" class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">书架</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
+	                        		<ul class="mui-table-view">
+      									<li class="mui-table-view-cell">
+        									<a href="#">课程信息</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">历史课程</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">心得评论</a>
+      									</li>
+   									</ul>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">设置</a>
+	                        		<ul class="mui-table-view">
+      									<li class="mui-table-view-cell">
+        									<a href="#">账号管理</a>
+      									</li>
+      									<li class="mui-table-view-cell">
+        									<a href="#">修改字体</a>
+      									</li>
+   									</ul>
+	                        	</li>
+	                        	<!--<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">读书心得</a>
+	                        	</li>
+	                        	<li class="mui-table-view-cell mui-collapse">
+	                        		<a class="mui-navigate-right" href="#">已购图书</a>
+	                        	</li>-->
+	                        </ul>
+	                    </div>
+	                    <div id="id-sideColumn-bottom-set">
+	                    	<a id="id-sideColumn-bottom-nightMode">
+	                    		<span class="mui-icon iconfont icon-night" style="float: left;font-size: 38px;"></span>
+	                    		<span>夜间模式</span>
+	                    	</a>
+                        	
+                        	<a id="id-sideColumn-bottom-exit">
+	                        	<span >退出登录</span>
+	                        	<span class="mui-icon iconfont icon-tuichu" style="font-size: 38px;float: right;"></span>
+                        	</a>
+	                    </div>
+	                </div>
+	            </aside>
 	            <!-- 菜单容器 -->
 	            <!-- 主页面标题 -->
 	            <header class="mui-bar mui-bar-nav">
-	                <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+	                <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-left"  href="#offCanvasSide" ></a>
 	                <h1 class="mui-title">我的收藏</h1>
 	            </header>
+	            <nav class="mui-bar mui-bar-tab">
+	    		    <a id="appIndex" class="mui-tab-item ">
+	    		        <span class="mui-icon iconfont icon-shouye"></span>
+	    		        <span class="mui-tab-label">首页</span>
+	    		    </a>
+	    		    <a id="bookshelf" class="mui-tab-item mui-active">
+	    		        <span class="mui-icon iconfont icon-shoucang"></span>
+	    		        <span class="mui-tab-label">收藏</span>
+	    		    </a>
+	    		    <a id="library" class="mui-tab-item">
+	    		        <span class="mui-icon iconfont icon-yuelanshi"></span>
+	    		        <span class="mui-tab-label">阅览课</span>
+	    		    </a>
+	    		    <a class="mui-tab-item">
+	    		        <span class="mui-icon iconfont icon-shu"></span>
+	    		        <span class="mui-tab-label">书库</span>
+	    		    </a>
+	    		</nav>
 	            <!-- 主页面内容容器 -->
 	            <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
 	                <div id="main_body" class="mui-scroll">

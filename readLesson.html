@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="css/mui.picker.min.css" />
 <script type="text/javascript" src="js/mui.picker.min.js" ></script>
 <script type="text/javascript" src="js/main.js" ></script>
-
+<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
 
 <script>
 	
@@ -62,9 +62,37 @@
 				});
 			})(mui);
 			
-		mui(".unit p:last-child").on("tag"," a:last-child",function(){
+		mui(".unit p:last-child").on("tap"," a:last-child",function(){
 			location.href="lessonCheck.html";
 		})
+		mui("#item1").on("tap"," #checkBook",function(){
+			location.href="index.html"
+		})
+		mui("body").on("tap","#appIndex",function(){
+			location.href="index.html";
+		})
+		mui("body").on("tap","#bookshelf",function(){
+			location.href="bookshelf.html";
+		})
+	}
+	$(function(){
+		$(".unit p:last-child a:first-child").on("tap",function(){
+			var b=$(this).parent().parent().siblings(".comment").length;
+			if(b==0){
+				var html="";
+				html+='<div class="comment">';
+				html+='<textarea id="textInput" oninput="staticComentWord(this);" onkeyup="staticComentWord(this);" placeholder="请输入150字以内的评论" ></textarea>';
+				html+="<p>"
+				html+='<input type="button" value="提交" style="margin:0 10px;" />';
+				html+='<input type="button" value="取消"  onclick="abolish(this);" />';
+				html+="</p>";
+				html+='</div>';
+				$(this).parent().parent().after(html);
+			}
+		})
+	})
+	function abolish(btn){
+			$(btn).parent().parent().remove();
 	}
 </script>
 </head>
@@ -140,7 +168,7 @@
 	                <h1 class="mui-title">阅览课</h1>
 	            </header>
 	            <nav class="mui-bar mui-bar-tab">
-	    		    <a id="appIndex" class="mui-tab-item mui-active">
+	    		    <a id="appIndex" class="mui-tab-item ">
 	    		        <span class="mui-icon iconfont icon-shouye"></span>
 	    		        <span class="mui-tab-label">首页</span>
 	    		    </a>
@@ -148,7 +176,7 @@
 	    		        <span class="mui-icon iconfont icon-shoucang"></span>
 	    		        <span class="mui-tab-label">收藏</span>
 	    		    </a>
-	    		    <a id="library" class="mui-tab-item">
+	    		    <a id="library" class="mui-tab-item mui-active">
 	    		        <span class="mui-icon iconfont icon-yuelanshi"></span>
 	    		        <span class="mui-tab-label">阅览课</span>
 	    		    </a>
@@ -168,7 +196,7 @@
 	                  	<div>
 	                  		<div id="item1" class="mui-control-content mui-active">
 	                  			<p>课程名：<input type="text"></p>
-	                  			<p>题&nbsp;&nbsp;&nbsp;&nbsp;名：<input type="text"><a>请选择课本</a></p>
+	                  			<p>题&nbsp;&nbsp;&nbsp;&nbsp;名：<input  type="text"><a id="checkBook">请选择课本</a></p>
 	                  			<p>班&nbsp;&nbsp;&nbsp;&nbsp;级：
 	                  				<select>
 	                  					<option>---请选择班级---</option>
