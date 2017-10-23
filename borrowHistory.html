@@ -63,6 +63,15 @@
 		
 	}
 </script>
+<script type="application/javascript">
+	function bookComments(btn){
+		alert("111111";)
+		/*var b=$(btn).parent().parent().siblings().length;
+		if(b==0){
+			$(btn).parent().parent().after();
+		}*/
+	}
+</script>
 	</head>
 	
 	<body>
@@ -79,7 +88,7 @@
 		            </header>
 		            <!-- 主页面内容容器 -->
 		            <div id="pullrefresh" class="mui-content mui-scroll-wrapper">
-                		
+                		<div id="main_body" class="mui-scroll">
                 		<div id="item1" class="mui-control-content mui-active">
 	                  			<p><span>时&nbsp;&nbsp;&nbsp;&nbsp;间：</span>
 	                  				<button id="demo1" data-options="{}" class="btn mui-btn mui-btn-block">开始时间</button>
@@ -96,11 +105,10 @@
                 		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
                 		            <div class="mui-media-body">
                 		                <h4>马克思主义基本原理</h4>
-										<span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
-										<span class="pub">阅读进度:35%</span><br/>
-										<input type="button" value="继续阅读" />
-										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+										<span class="author">借阅时间:2017.09.15</span><br /> 
+										<span class="pubDate">归还时间:2017.10.15</span>
                 		            </div>
+                		            <input id="wReviewBtn" type="button" value="评论" onclick="bookComments(this);"/>
                 		        </a>
                 		    </li>
                 		    <li class="mui-table-view-cell mui-media">
@@ -108,11 +116,10 @@
                 		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
                 		            <div class="mui-media-body">
                 		                <h4>怀柔远人</h4>
-                		                <span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
-										<span class="pub">阅读进度:35%</span><br/>
-										<input type="button" value="继续阅读" />
-										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+                		                <span class="author">借阅时间:2017.09.15</span><br /> 
+                		                <span class="pubDate">归还时间:2017.10.15</span>
                 		            </div>
+                		            <input id="wReviewBtn" type="button" value="评论" onclick="bookComments(this);"/>
                 		        </a>
                 		    </li>
                 		    <li class="mui-table-view-cell mui-media">
@@ -120,15 +127,36 @@
                 		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
                 		            <div class="mui-media-body">
                 		                <h4>怀柔远人</h4>
-                		                <span class="author">借阅时间:2017.09.15</span> <span class="pubDate">----应还时间:2017.10.15</span><br />
-										<span class="pub">阅读进度:0%</span><br/>
-										<input type="button" value="继续阅读" />
-										<input type="button" value="还&nbsp;&nbsp;&nbsp;&nbsp;书" />
+                		                <span class="author">借阅时间:2017.09.15</span><br /> 
+                		                <span class="pubDate">归还时间:2017.10.15</span>
                 		            </div>
+                		            <input id="wReviewBtn" type="button" value="评论" onclick="bookComments(this);"/>
+                		        </a>
+                		    </li>
+                		    <li class="mui-table-view-cell mui-media">
+                		        <a href="javascript:;">
+                		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+                		            <div class="mui-media-body">
+                		                <h4>怀柔远人</h4>
+                		                <span class="author">借阅时间:2017.09.15</span><br /> 
+                		                <span class="pubDate">归还时间:2017.10.15</span>
+                		            </div>
+                		            <input id="wReviewBtn" type="button" value="评论" onclick="bookComments(this);"/>
+                		        </a>
+                		    </li>
+                		    <li class="mui-table-view-cell mui-media">
+                		        <a href="javascript:;">
+                		            <img id="currentlyBorrowImg" class="mui-media-object mui-pull-left" src="http://192.168.1.5/pic/7-01-004121-0.jpg">
+                		            <div class="mui-media-body">
+                		                <h4>怀柔远人</h4>
+                		                <span class="author">借阅时间:2017.09.15</span><br /> 
+                		                <span class="pubDate">归还时间:2017.10.15</span>
+                		            </div>
+                		            <input id="wReviewBtn" type="button" value="评论" onclick="bookComments(this);"/>
                 		        </a>
                 		    </li>
                 		</ul>
-                		
+                		</div>
 		            </div>
 		    	</div>
 		    </div>
