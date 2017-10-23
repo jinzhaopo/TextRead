@@ -1,0 +1,10 @@
+.mui-media a{
+	font-size: 16px;
+	height: 8em;
+}
+#currentlyBorrowImg{
+	height: 95%;
+	width: 13%;
+	max-width: 110px;
+	max-height: 109px;
+}
