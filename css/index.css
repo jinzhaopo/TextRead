@@ -51,7 +51,7 @@
 #topIconSearch{
 	float: right;
 }
-/*.mui-table-view-cell.mui-collapse.mui-active>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active>.mui-push-right:after {
+.mui-table-view-cell.mui-collapse.mui-active>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse.mui-active>.mui-push-right:after {
 	content: none; 
 }
 .mui-table-view-cell.mui-collapse>.mui-navigate-right:after, .mui-table-view-cell.mui-collapse>.mui-push-right:after {
@@ -59,7 +59,7 @@
 }
 .mui-navigate-right:after, .mui-push-right:after {
 	content: none; 
-}*/
+}
 #id-sideColumn-bottom-set{
 	position: absolute;
 	bottom: 2em;
