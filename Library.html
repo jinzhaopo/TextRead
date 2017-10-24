@@ -57,8 +57,8 @@
 		mui("body").on("tap","#library",function(){
 			location.href="readLesson.html";
 		});
-		mui("#hotRecommended").on('tap','.mui-col-xs-3',function(){
-		location.href="pullrefresh_main.html";
+		mui("#newBookRecommended").on('tap','.bookLi',function(){
+			location.href="pullrefresh_main.html";
 		});
 		mui("body").on("tap","#library",function(){
 		location.href="readLesson.html";
@@ -80,6 +80,9 @@
 		});
 		mui("body").on("tap","#SetUp",function(){
 			location.href="modifyPassword.html";
+		});
+		mui("body").on("tap","#suggest",function(){
+			location.href="suggest.html";
 		});
     }   
 	    </script>
@@ -116,7 +119,7 @@
 	                        	<li id="readLesson" class="mui-table-view-cell mui-collapse">
 	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li  id="suggest" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
 	                        	</li>
 	                        	<li id="SetUp" class="mui-table-view-cell mui-collapse">
