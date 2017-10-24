@@ -97,6 +97,45 @@
 	function abolish(btn){
 			$(btn).parent().parent().remove();
 	}
+	window.onload = function(){  
+        mui('#pullrefresh').scroll(); 
+        mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
+			location.href="login.html";
+		});
+		mui(".mui-off-canvas-wrap").on('tap','#shuku',function(){
+		location.href="Library.html";
+		});
+		mui("body").on("tap","#appIndex",function(){
+			location.href="index.html";
+		});
+		mui("body").on("tap","#library",function(){
+			location.href="readLesson.html";
+		});
+		mui("#hotRecommended").on('tap','.mui-col-xs-3',function(){
+		location.href="pullrefresh_main.html";
+		});
+		mui("body").on("tap","#library",function(){
+		location.href="readLesson.html";
+		});
+		mui("body").on("tap","#bookshelf",function(){
+			location.href="bookshelf.html";
+		});
+		mui("body").on("tap","#personalInformation",function(){
+			location.href="personalInformation.html";
+		});
+		mui("body").on("tap","#currentlyBorrow",function(){
+			location.href="currentlyBorrow.html";
+		});
+		mui("body").on("tap","#borrowHistory",function(){
+			location.href="borrowHistory.html";
+		});
+		mui("body").on("tap","#readLesson",function(){
+			location.href="readLesson.html";
+		});
+		mui("body").on("tap","#SetUp",function(){
+			location.href="modifyPassword.html";
+		});
+    } 
 </script>
 </head>
 <body>
@@ -115,45 +154,34 @@
 	                        	<h3>点击登录</h3>
 	                        </div>
 	                        <ul class="mui-table-view ">
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="personalInformation" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">个人信息</a>
 	                        	</li>
 	                        	<li id="bookshelf" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">书架</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="currentlyBorrow" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="borrowHistory" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="readLesson" class="mui-table-view-cell mui-collapse">
 	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
-	                        		<ul class="mui-table-view">
-      									<li class="mui-table-view-cell">
-        									<a href="#">课程信息</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">历史课程</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">心得评论</a>
-      									</li>
-   									</ul>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="SetUp" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">设置</a>
-	                        		<ul class="mui-table-view">
+	                        		<!--<ul class="mui-table-view">
       									<li class="mui-table-view-cell">
         									<a href="#">账号管理</a>
       									</li>
       									<li class="mui-table-view-cell">
         									<a href="#">修改字体</a>
       									</li>
-   									</ul>
+   									</ul>-->
 	                        	</li>
 	                        	<!--<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">读书心得</a>
@@ -163,6 +191,17 @@
 	                        	</li>-->
 	                        </ul>
 	                    </div>
+	                    <div id="id-sideColumn-bottom-set">
+	                    	<a id="id-sideColumn-bottom-nightMode">
+	                    		<span class="mui-icon iconfont icon-night" style="float: left;font-size: 38px;"></span>
+	                    		<span>夜间模式</span>
+	                    	</a>
+                        	
+                        	<a id="id-sideColumn-bottom-exit">
+	                        	<span >退出登录</span>
+	                        	<span class="mui-icon iconfont icon-tuichu" style="font-size: 38px;float: right;"></span>
+                        	</a>
+	                    </div>
 	                </div>
 	            </aside>
 	            <!-- 主页面标题 -->
@@ -171,7 +210,7 @@
 	                <h1 class="mui-title">阅览课</h1>
 	            </header>
 	            <nav class="mui-bar mui-bar-tab">
-	    		    <a id="appIndex" class="mui-tab-item ">
+	    		    <a id="appIndex" class="mui-tab-item">
 	    		        <span class="mui-icon iconfont icon-shouye"></span>
 	    		        <span class="mui-tab-label">首页</span>
 	    		    </a>

@@ -55,7 +55,9 @@
 	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
 					location.href="login.html";
 				});
-				
+				mui("#newBookRecommended").on('tap','.bookLi',function(){
+				location.href="pullrefresh_main.html";
+				});
 				initPage();
 				var gallery = mui('.mui-slider');
 				gallery.slider({

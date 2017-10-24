@@ -1,11 +1,8 @@
 .mui-bar{
-	height: 7.4rem;
+	height: auto;
 }
 #pullrefresh{
-	padding-top: 7.4rem;
-}
-.mui-bar-nav~.mui-content .mui-pull-top-pocket{
-	top:7.4rem;
+	padding-top: 44px;
 }
 .search-div{
 	display:inline-block;
@@ -15,7 +12,7 @@
 	line-height: 3rem;
 	margin-top: 1rem;
 	right: 40px;
-    left: 40px;
+    left: 15%;
 	
 }
 .search-div input{
@@ -26,11 +23,6 @@
 	width: 100%;
 	background: none;
 	
-}
-.search-div .mui-icon{
-	margin: 0 0;
-	padding: 0 0;
-	line-height: 3rem;
 }
 .type-select{
 	width: 100%;
@@ -53,4 +45,10 @@
 	line-height: 2.4rem;
 	border: 1px solid #4F4F4F;
 	text-align: center;
+}
+.search-div input{
+	text-align: center;
+}
+.search-div{
+	width: 60%;
 }

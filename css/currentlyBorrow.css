@@ -8,3 +8,6 @@
 	max-width: 110px;
 	max-height: 109px;
 }
+.mui-media a input{
+	float: right;
+}

@@ -44,34 +44,44 @@
 	      	});
 	      	
 	      	window.onload = function(){  
-	            mui('#pullrefresh').scroll(); 
-	            mui('#type-scroll').scroll({
-				 scrollY: false, //是否竖向滚动
-				 scrollX: true, //是否横向滚动
-				 startX: 0, //初始化时滚动至x
-				 startY: 0, //初始化时滚动至y
-				 indicators: false, //是否显示滚动条
-				 deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
-				});
-	            mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
-					location.href="login.html";
-				});
-				mui("body").on("tap","#appIndex",function(){
-					location.href="index.html";
-				})
-				mui("body").on("tap","#bookshelf",function(){
-					location.href="bookshelf.html";
-				})
-				mui("body").on("tap","#library",function(){
-					location.href="readLesson.html";
-				})
-				initPage();
-				var gallery = mui('.mui-slider');
-				gallery.slider({
-					interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
-				});
-				
-	        }  
+        mui('#pullrefresh').scroll(); 
+        mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
+			location.href="login.html";
+		});
+		mui(".mui-off-canvas-wrap").on('tap','#shuku',function(){
+		location.href="Library.html";
+		});
+		mui("body").on("tap","#appIndex",function(){
+			location.href="index.html";
+		});
+		mui("body").on("tap","#library",function(){
+			location.href="readLesson.html";
+		});
+		mui("#hotRecommended").on('tap','.mui-col-xs-3',function(){
+		location.href="pullrefresh_main.html";
+		});
+		mui("body").on("tap","#library",function(){
+		location.href="readLesson.html";
+		});
+		mui("body").on("tap","#bookshelf",function(){
+			location.href="bookshelf.html";
+		});
+		mui("body").on("tap","#personalInformation",function(){
+			location.href="personalInformation.html";
+		});
+		mui("body").on("tap","#currentlyBorrow",function(){
+			location.href="currentlyBorrow.html";
+		});
+		mui("body").on("tap","#borrowHistory",function(){
+			location.href="borrowHistory.html";
+		});
+		mui("body").on("tap","#readLesson",function(){
+			location.href="readLesson.html";
+		});
+		mui("body").on("tap","#SetUp",function(){
+			location.href="modifyPassword.html";
+		});
+    }   
 	    </script>
 	</head>
 
@@ -91,45 +101,34 @@
 	                        	<h3>点击登录</h3>
 	                        </div>
 	                        <ul class="mui-table-view ">
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="personalInformation" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">个人信息</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="bookshelf" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">书架</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="currentlyBorrow" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="borrowHistory" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="readLesson" class="mui-table-view-cell mui-collapse">
 	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
-	                        		<ul class="mui-table-view">
-      									<li class="mui-table-view-cell">
-        									<a href="#">课程信息</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">历史课程</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">心得评论</a>
-      									</li>
-   									</ul>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="SetUp" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">设置</a>
-	                        		<ul class="mui-table-view">
+	                        		<!--<ul class="mui-table-view">
       									<li class="mui-table-view-cell">
         									<a href="#">账号管理</a>
       									</li>
       									<li class="mui-table-view-cell">
         									<a href="#">修改字体</a>
       									</li>
-   									</ul>
+   									</ul>-->
 	                        	</li>
 	                        	<!--<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">读书心得</a>
