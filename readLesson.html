@@ -18,8 +18,29 @@
 	
 	mui.init();
 	
-	window.onload=function(){
-		mui('#pullrefresh').scroll(); 
+	
+	$(function(){
+		$(".unit p:last-child a:first-child").on("tap",function(){
+			var b=$(this).parent().parent().siblings(".comment").length;
+			if(b==0){
+				var html="";
+				html+='<div class="comment">';
+				html+='<textarea id="textInput" oninput="staticComentWord(this);" onkeyup="staticComentWord(this);" placeholder="请输入150字以内的评论" ></textarea>';
+				html+="<p>"
+				html+='<input type="button" value="提交" style="margin:0 10px;" />';
+				html+='<input type="button" value="取消"  onclick="abolish(this);" />';
+				html+="</p>";
+				html+='</div>';
+				$(this).parent().parent().after(html);
+			}
+		})
+	})
+	function abolish(btn){
+			$(btn).parent().parent().remove();
+	}
+	window.onload = function(){ 
+		
+        mui('#pullrefresh').scroll(); 
 			(function($) {
 				$.init();
 				var result = $('#result')[0];
@@ -61,44 +82,6 @@
 					}, false);
 				});
 			})(mui);
-			
-		mui(".unit p:last-child").on("tap"," a:last-child",function(){
-			location.href="lessonCheck.html";
-		})
-		mui("#item1").on("tap"," #checkBook",function(){
-			location.href="index.html"
-		})
-		mui("body").on("tap","#appIndex",function(){
-			location.href="index.html";
-		})
-		mui("body").on("tap","#shuku",function(){
-			location.href="Library.html";
-		})
-		mui("body").on("tap","#bookshelf",function(){
-			location.href="bookshelf.html";
-		})
-	}
-	$(function(){
-		$(".unit p:last-child a:first-child").on("tap",function(){
-			var b=$(this).parent().parent().siblings(".comment").length;
-			if(b==0){
-				var html="";
-				html+='<div class="comment">';
-				html+='<textarea id="textInput" oninput="staticComentWord(this);" onkeyup="staticComentWord(this);" placeholder="请输入150字以内的评论" ></textarea>';
-				html+="<p>"
-				html+='<input type="button" value="提交" style="margin:0 10px;" />';
-				html+='<input type="button" value="取消"  onclick="abolish(this);" />';
-				html+="</p>";
-				html+='</div>';
-				$(this).parent().parent().after(html);
-			}
-		})
-	})
-	function abolish(btn){
-			$(btn).parent().parent().remove();
-	}
-	window.onload = function(){  
-        mui('#pullrefresh').scroll(); 
         mui(".mui-off-canvas-wrap").on('tap','#reg',function(){
 			location.href="login.html";
 		});
@@ -138,6 +121,9 @@
 		mui("body").on("tap","#suggest",function(){
 			location.href="suggest.html";
 		});
+		mui(".unit p:last-child").on("tap"," a:last-child",function(){
+			location.href="lessonCheck.html";
+		})
     } 
 </script>
 </head>
