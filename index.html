@@ -122,38 +122,27 @@
 		      	})
 			});
 			
-//			var btn = document.getElementById("library");
-//			btn.addEventListener("tap",function () {
-//				 mui.openWindow({
-//		      		url:'readLesson.html',
-//		      		id:'library',
-//		      		styles:{
-//		      			top:"50px",
-//		      			bottom:"51px",
-//		      			height:"600px"
-//		      		},
-//		      		createNew:false
-//		      	})
-//			});
 			mui("body").on("tap","#library",function(){
 				location.href="readLesson.html";
-			})
+			});
 			mui("body").on("tap","#bookshelf",function(){
 				location.href="bookshelf.html";
-			})
-//			var btn2=document.getElementById("bookshelf");
-//			btn2.addEventListener("tap",function () {
-//				 mui.openWindow({
-//		      		url:'bookshelf.html',
-//		      		id:'bookshelf',
-//		      		styles:{
-//		      			top:"50px",
-//		      			bottom:"51px",
-//		      			height:"600px"
-//		      		},
-//		      		createNew:false
-//		      	})
-//			});
+			});
+			mui("body").on("tap","#personalInformation",function(){
+				location.href="personalInformation.html";
+			});
+			mui("body").on("tap","#currentlyBorrow",function(){
+				location.href="currentlyBorrow.html";
+			});
+			mui("body").on("tap","#borrowHistory",function(){
+				location.href="borrowHistory.html";
+			});
+			mui("body").on("tap","#readLesson",function(){
+				location.href="readLesson.html";
+			});
+			mui("body").on("tap","#SetUp",function(){
+				location.href="SetUp.html";
+			});
 			var btn4 = document.getElementById("recommended");
 			btn4.addEventListener("tap",function () {
 				 mui.openWindow({
@@ -217,45 +206,34 @@
 	                        	<h3>点击登录</h3>
 	                        </div>
 	                        <ul class="mui-table-view ">
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="personalInformation" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">个人信息</a>
 	                        	</li>
 	                        	<li id="bookshelf" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">书架</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="currentlyBorrow" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">当前借阅</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="borrowHistory" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">借阅历史</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="readLesson" class="mui-table-view-cell mui-collapse">
 	                        		<a id="id-sideColumn-yuelanke" class="mui-navigate-right" href="#">阅览课</a>
-	                        		<ul class="mui-table-view">
-      									<li class="mui-table-view-cell">
-        									<a href="#">课程信息</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">历史课程</a>
-      									</li>
-      									<li class="mui-table-view-cell">
-        									<a href="#">心得评论</a>
-      									</li>
-   									</ul>
 	                        	</li>
 	                        	<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">意见反馈</a>
 	                        	</li>
-	                        	<li class="mui-table-view-cell mui-collapse">
+	                        	<li id="SetUp" class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">设置</a>
-	                        		<ul class="mui-table-view">
+	                        		<!--<ul class="mui-table-view">
       									<li class="mui-table-view-cell">
         									<a href="#">账号管理</a>
       									</li>
       									<li class="mui-table-view-cell">
         									<a href="#">修改字体</a>
       									</li>
-   									</ul>
+   									</ul>-->
 	                        	</li>
 	                        	<!--<li class="mui-table-view-cell mui-collapse">
 	                        		<a class="mui-navigate-right" href="#">读书心得</a>
