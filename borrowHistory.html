@@ -59,8 +59,25 @@
 					}, false);
 				});
 			})(mui);
-			
-		
+	}
+	$(function(){
+		$("#wReviewBtn").on("tap",function(){
+			var b=$(this).parent().parent().siblings(".comment").length;
+			if(b==0){
+				var html="";
+				html+='<div class="comment">';
+				html+='<textarea id="textInput" oninput="staticComentWord(this);" onkeyup="staticComentWord(this);" placeholder="请输入150字以内的评论" ></textarea>';
+				html+="<p>"
+				html+='<input type="button" value="提交" style="margin:0 10px;" />';
+				html+='<input type="button" value="取消"  onclick="abolish(this);" />';
+				html+="</p>";
+				html+='</div>';
+				$(this).parent().parent().after(html);
+			}
+		})
+	})
+	function abolish(btn){
+			$(btn).parent().parent().remove();
 	}
 </script>
 

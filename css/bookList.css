@@ -83,3 +83,15 @@ html{
 .bookUl .bookLi .book-upDate .date{
 	font-size: 12px;
 }
+#main_body ul{
+	background-image: url(../images/bookshelf.png);
+	/*background-size: 152.5%;*/
+	background-size: 1175px;
+}
+#main_body ul li .mui-media-object{
+	height: 240px !important;
+	/*border-bottom: 20px solid #B76a32;*/
+}
+#main_body ul li{
+	margin-bottom: 40px;
+}
